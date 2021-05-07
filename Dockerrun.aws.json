@@ -3,14 +3,14 @@
     "containerDefinitions": [
         {
             "name": "client",
-            "image": "marcosjampietri/multi-client",
+            "image": "marcosjampietri/sciurus-client",
             "hostname": "client",
             "essential": false,
             "memory": 128
         },
         {
             "name": "nginx",
-            "image": "marcosjampietri/multi-nginx",
+            "image": "marcosjampietri/sciurus-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
