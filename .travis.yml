@@ -5,10 +5,10 @@ services:
     - docker
 
 before_install:
-    - docker build -t marcosjampietri/sciurus-marcos -f ./client/Dockerfile.dev ./client
+    - docker build -t marcosjampietri/marcos-sciurus -f ./client/Dockerfile.dev ./client
 
 script:
-    - docker run -e CI=true marcosjampietri/sciurus-marcos npm test
+    - docker run -e CI=true marcosjampietri/marcos-sciurus npm test
 
 after_success:
     - docker build -t marcosjampietri/sciurus-client ./client
@@ -24,10 +24,10 @@ deploy:
     skip_cleanup: true
     provider: elasticbeanstalk
     region: eu-west-2
-    app: sciurus-marcos
-    env: Sciurusmarcos-env
+    app: marcos-sciurus
+    env: Marcossciurus-env
     bucket_name: elasticbeanstalk-eu-west-2-344999520177
-    bucket_path: sciurus-marcos
+    bucket_path: marcos-sciurus
     on:
         branch: main
     access_key_id: "$AWS_ACCESS_KEY_ID"
