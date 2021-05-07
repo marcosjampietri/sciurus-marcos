@@ -3,15 +3,15 @@
 /.nova
 
 # dependencies
-/dashboard/node_modules
-/dashboard/.pnp
-/dashboard.pnp.js
+/client/node_modules
+/client/.pnp
+/client.pnp.js
 
 # testing
-/dashboard/coverage
+/client/coverage
 
 # production
-/dashboard/build
+/client/build
 
 # dependencies
 /server/node_modules
@@ -31,11 +31,11 @@
 .env.test.local
 .env.production.local
 
-/dashboard.DS_Store
-/dashboard.env.local
-/dashboard.env.development.local
-/dashboard.env.test.local
-/dashboard.env.production.local
+/client.DS_Store
+/client.env.local
+/client.env.development.local
+/client.env.test.local
+/client.env.production.local
 
 /server.DS_Store
 /server/.env

@@ -5,19 +5,19 @@ services:
     - docker
 
 before_install:
-    - docker build -t marcosjampietri/sciurus-react -f ./dashboard/Dockerfile.dev ./dashboard
+    - docker build -t marcosjampietri/sciurus-react -f ./client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true marcosjampietri/sciurus-react npm test
 
 after_success:
-    - docker build -t marcosjampietri/multi-dashboard ./dashboard
+    - docker build -t marcosjampietri/multi-client ./client
     - docker build -t marcosjampietri/multi-nginx ./nginx
 
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push marcosjampietri/multi-dashboard
+    - docker push marcosjampietri/multi-client
     - docker push marcosjampietri/multi-nginx
 
 deploy:
