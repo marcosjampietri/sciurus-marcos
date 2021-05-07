@@ -1,0 +1,42 @@
+{
+  "name": "Sciurus-Analytics",
+  "version": "1.0.0",
+  "keywords": [
+    "chart",
+    "react",
+    "d3.js",
+    "bar",
+    "react-spring"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "d3": "6.7.0",
+    "lodash": "4.17.21",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-spring": "9.1.2",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
