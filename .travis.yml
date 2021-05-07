@@ -11,14 +11,14 @@ script:
     - docker run -e CI=true marcosjampietri/sciurus-marcos npm test
 
 after_success:
-    - docker build -t marcosjampietri/multi-client ./client
-    - docker build -t marcosjampietri/multi-nginx ./nginx
+    - docker build -t marcosjampietri/sciurus-client ./client
+    - docker build -t marcosjampietri/sciurus-nginx ./nginx
 
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push marcosjampietri/multi-client
-    - docker push marcosjampietri/multi-nginx
+    - docker push marcosjampietri/sciurus-client
+    - docker push marcosjampietri/sciurus-nginx
 
 deploy:
     skip_cleanup: true
