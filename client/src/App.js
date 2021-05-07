@@ -6,6 +6,7 @@ import AnimatedBar from "./components/AnimatedBarHooks";
 import ControlPan from "./components/controlsComp";
 import { initAction } from "./actions/filterAction";
 
+
 function App() {
     const dispatch = useDispatch();
 
@@ -49,6 +50,9 @@ function App() {
             </div>
 
             <ControlPan />
+            <a href='https://github.com/marcosjampietri/sciurus-marcos'
+                target='_blank'
+                rel='noreferrer'>CODE ON GITHUB</a>
         </div>
     );
 }
