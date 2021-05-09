@@ -27,7 +27,6 @@ const MultiSelect = () => {
 
   return (
     <Block>
-      <Mode>CHECKBOX MODE </Mode>
       <Container>
         <Label>ONE YEAR</Label>
         <Checkbox type="checkbox" value={checked} onChange={handleCheck} />
@@ -51,13 +50,6 @@ export default MultiSelect;
 
 const Block = styled.div`
   height: 100%;
-`;
-
-const Mode = styled.h3`
-  font-family: arial;
-  color: #2d33e2;
-  padding: 10px 20px 40px 20px;
-  margin: 0px;
 `;
 
 const Container = styled.label`
@@ -125,9 +117,7 @@ const Checkbox = styled.input`
 
   /* When the checkbox is checked, add a blue background */
   :checked ~ .checkmark {
-    background-image: linear-gradient(
-    #00c2ff 0%,
-    #162eda 90%);
+    background-image: linear-gradient(#00c2ff 0%, #162eda 90%);
   }
 
   /* Show the checkmark when checked */

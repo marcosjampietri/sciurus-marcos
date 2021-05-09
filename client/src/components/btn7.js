@@ -6,27 +6,25 @@ const Btn7 = ({ reads, somProp }) => {
       <Btn7Styled>
         <span>{reads}</span>
       </Btn7Styled>
-        <div>{somProp}Maybe insert an icon</div>
     </Block>
   );
 };
 
 export default Btn7;
 
-const Block = styled.button`
-  width: 100%;
+const Block = styled.div`
   height: 100%;
-  // margin: 40px auto;
+  margin: 10px;
   background-color: transparent;
   text-align: center;
 `;
 
 const Btn7Styled = styled.button`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   color: #fff;
   border-radius: 5px;
-  // padding: 10px 25px;
+
   font-family: "Lato", sans-serif;
   font-weight: 500;
   background: transparent;
@@ -38,23 +36,17 @@ const Btn7Styled = styled.button`
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 
-  // margin: 20px;
-
-  background: linear-gradient(
-    0deg,
-    #0050ff 0%,
-    #021af9 100%
-  );
-  line-height: 42px;
+  background: linear-gradient(0deg, #0050ff 0%, #021af9 100%);
+  // line-height: 80px;
   padding: 0;
   border: none;
 
   span {
     position: relative;
     display: block;
+    line-height: 100px;
     width: 100%;
     height: 100%;
-
   }
   :before,
   :after {

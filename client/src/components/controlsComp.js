@@ -5,7 +5,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { HiOutlineX } from "react-icons/hi";
 import MultiSelect from "./multiSelectComp";
 import SingleSelect from "./singleSelectComp";
-import Btn7 from "./btn7"
+import Btn7 from "./btn7";
+import Btn12 from "./btn12";
 
 const ControlPan = () => {
   //dispatch buttons
@@ -30,6 +31,7 @@ const ControlPan = () => {
       <Title>DATA PAID</Title>
       <Container>
         <CurrentMode>
+          <Btn12 modeName={"MULTI SELECTION"} />
           <MultiSelect />
         </CurrentMode>
         <Fix>
@@ -50,30 +52,30 @@ const ControlPan = () => {
 export default ControlPan;
 
 const Block = styled.div`
-border: 1px solid #b9bde7;
-max-width: 700px;
-border-radius: 10px;
-padding: 10px;
+  border: 1px solid #b9bde7;
+  max-width: 700px;
+  border-radius: 10px;
+  padding: 10px;
   background-color: #f8f8f8;
 `;
 
 const Title = styled.h2`
-font-family: arial;
-font-size: 30px;
-padding: 0px 30px;
-margin: 0px;
-
+  font-family: "arial black";
+  font-size: 30px;
+  padding: 0px 30px;
+  margin: 0px;
+  color: #1848e1;
 `;
 const Container = styled.div`
-border-radius: 5px;
+  border-radius: 5px;
   display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows: 300px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-radius: 20px;
 `;
 
 const CurrentMode = styled.div`
-border-radius: 10px;
+  border-radius: 10px;
   padding: 15px;
   grid-column: 1;
   grid-row: 1;
@@ -129,8 +131,6 @@ const Tab = styled.div`
   justify-content: space-around;
 `;
 
-
-
 const SelectorMode = styled.div`
   // border-radius: 20px;
   position: absolute;
@@ -145,7 +145,6 @@ const SelectorMode = styled.div`
   transition: 0.3s;
   opacity: 0;
   z-index: 3;
-
 
   display: flex;
   flex-direction: column;

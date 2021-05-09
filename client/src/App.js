@@ -6,6 +6,7 @@ import AnimatedBar from "./components/AnimatedBarHooks";
 import ControlPan from "./components/controlsComp";
 import { initAction } from "./actions/filterAction";
 
+import Btn11 from "./components/btn11";
 
 function App() {
     const dispatch = useDispatch();
@@ -50,9 +51,9 @@ function App() {
             </div>
 
             <ControlPan />
-            <a href='https://github.com/marcosjampietri/sciurus-marcos'
-                target='_blank'
-                rel='noreferrer'>CODE ON GITHUB</a>
+            <Btn11 direction="https://github.com/marcosjampietri/sciurus-marcos">
+                CODE ON GITHUB
+      </Btn11>
         </div>
     );
 }
