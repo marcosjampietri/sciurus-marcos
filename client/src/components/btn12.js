@@ -2,17 +2,22 @@ import { useDispatch, useSelector } from "react-redux";
 
 import styled from "styled-components";
 
-
 import { multiAction, singleAction } from "../actions/modeAction";
-
 
 const Btn12 = () => {
   const dispatch = useDispatch();
+  const { modeName, currentComp } = useSelector((state) => state.mode);
 
   const changeMode = () => {
-    dispatch(singleAction());
+    switch (modeName) {
+      case "Multi Selection":
+        dispatch(singleAction());
+        break;
+      case "Single Selection":
+        dispatch(multiAction());
+        break;
+    }
   };
-  const { modeName, currentComp } = useSelector((state) => state.mode);
   return (
     <Block>
       <Btn12Styled onClick={changeMode}>

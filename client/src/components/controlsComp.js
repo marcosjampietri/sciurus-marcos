@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { incRowAction, decRowAction } from "../actions/filterAction";
@@ -6,7 +6,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { HiOutlineX } from "react-icons/hi";
 import MultiSelect from "./multiSelectComp";
 import SingleSelect from "./singleSelectComp";
-
 
 import Btn7 from "./btn7";
 import Btn12 from "./btn12";
@@ -19,8 +18,6 @@ const ControlPan = () => {
   const { yearnum, isLoading } = useSelector((state) => state.overview);
   const { modeName, currentComp } = useSelector((state) => state.mode);
 
-
-
   const incRow = () => {
     dispatch(incRowAction());
   };
@@ -28,16 +25,23 @@ const ControlPan = () => {
     dispatch(decRowAction());
   };
 
-
-
   const iconStyle = {
     fontSize: "32px",
     transform: "rotate(90deg)",
   };
 
+
+
   const modeRender = () => {
-    if (modeName == 'MultiSelect') { return < MultiSelect /> } else if (modeName == 'SingleSelect') { return <SingleSelect /> }
-  }
+    switch (modeName) {
+      case "Multi Selection":
+        return <MultiSelect />;
+      case "Single Selection":
+        return <SingleSelect />;
+      case "Slider Selection":
+        return <SingleSelect />;
+    }
+  };
 
   return (
     <Block>

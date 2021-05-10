@@ -2,6 +2,7 @@ import MultiSelect from "../components/multiSelectComp";
 
 const initState = {
     modeName: "",
+    currentComp: null,
 };
 
 export const modeReducer = (state = initState, action) => {
@@ -9,19 +10,18 @@ export const modeReducer = (state = initState, action) => {
         case "MULTI_SLCT":
             return {
                 ...state,
-                modeName: "MultiSelect",
+                modeName: "Multi Selection",
                 currentComp: MultiSelect,
-
             };
         case "SINGLE_SLCT":
             return {
                 ...state,
-                modeName: "SingleSelect",
+                modeName: "Single Selection",
             };
         case "SLIDER_SLCT":
             return {
                 ...state,
-                modeName: "SliderSelect",
+                modeName: "Slider Selection",
             };
         default:
             return {
