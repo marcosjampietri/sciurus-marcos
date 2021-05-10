@@ -5,6 +5,7 @@ import * as d3 from "d3";
 import AnimatedBar from "./components/AnimatedBarHooks";
 import ControlPan from "./components/controlsComp";
 import { initAction } from "./actions/filterAction";
+import { multiAction } from "./actions/modeAction"
 
 import Btn11 from "./components/btn11";
 
@@ -13,7 +14,9 @@ function App() {
 
     useEffect(() => {
         dispatch(initAction());
+        dispatch(multiAction());
     }, [dispatch]);
+
 
     //access rootReducer
     const { yearnum, isLoding } = useSelector((state) => state.overview);

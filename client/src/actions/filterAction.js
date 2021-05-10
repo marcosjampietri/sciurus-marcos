@@ -14,15 +14,3 @@ export const decRowAction = () => async (dispatch) => {
         type: "DEC_ROW",
     });
 };
-
-export const softSklAction = () => async (dispatch) => {
-    dispatch({
-        type: "SOFT_SKILL",
-    });
-};
-
-export const psnSklAction = () => async (dispatch) => {
-    dispatch({
-        type: "PERS_SKILL",
-    });
-};
